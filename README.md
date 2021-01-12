@@ -1,6 +1,6 @@
 # BankAccount
 
-Este es un proyecto en el que podras tener una nube para guardar y descargar mas facilmente tus programas. Tambien puedes crear y utilizar cuentas que se guardaran en una base de datos.
+Este es un proyecto en el que podras tener un banco virtual para simular acciones reales.
 
 ### Pre-requisitos 📋
 
