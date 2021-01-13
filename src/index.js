@@ -25,10 +25,16 @@ app.set('view engine', '.hbs');
 
 app.use(flash());
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(passport.initialize());
-app.use(passport.session());
+
+app.use((req, res, next) => {
+    
+    next();
+});
+
+app.use(require('./routes/index'));
+
 
 app.listen(app.get('port'), () => {
     console.log('Server on port ', app.get('port'));
