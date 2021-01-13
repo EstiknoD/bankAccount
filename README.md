@@ -19,7 +19,57 @@ npm i
 Luego habres mysql en una terminal como **root** y ejecutas los siguientes comando para crear la base de datos, estos tambien los tendras en una carpeta del proyecto llamada **database** en un fichero **.sql**.
 
 ```
-Base de datos
+CREATE DATABASE bankaccount;
+
+USE bankaccount;
+
+--users table
+CREATE TABLE users(
+    id INT(11) NOT NULL,
+    username VARCHAR(16) NOT NULL,
+    password VARCHAR(60) NOT NULL,
+    fullname VARCHAR(100) NOT NULL
+);
+
+ALTER TABLE users
+    ADD PRIMARY KEY (id);
+
+ALTER TABLE users
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+
+DESCRIBE users;
+
+--Accounts tables
+
+CREATE TABLE mainAccount(
+    id INT(11) NOT NULL,
+    money INT(11) NOT NULL,
+    user_id INT(11),
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+ALTER TABLE mainAccount
+    ADD PRIMARY KEY (id);
+
+ALTER TABLE mainAccount
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+
+DESCRIBE mainAccount;
+
+CREATE TABLE saveAccount(
+    id INT(11) NOT NULL,
+    money INT(11) NOT NULL,
+    user_id INT(11),
+    CONSTRAINT fl_user FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+ALTER TABLE saveAccount
+    ADD PRIMARY KEY (id);
+
+ALTER TABLE saveAccount
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+
+DESCRIBE saveAccount;
 ```
 
 Para terminar tendras que abri el archivo **keys.js** en la carpeta **src** y modificar la contraseña y poner la que tienes, en mi caso he puesto una de prueba.
