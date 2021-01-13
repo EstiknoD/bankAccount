@@ -2,7 +2,6 @@ const express = require('express');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
-const multer = require('multer');
 const fs = require('fs');
 const flash = require('connect-flash');
 const session = require('express-session');
@@ -34,7 +33,10 @@ app.use((req, res, next) => {
 });
 
 app.use(require('./routes/index'));
+app.use('/bank', require('./routes/bank'));
+app.use(require('./routes/authentication'));
 
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(app.get('port'), () => {
     console.log('Server on port ', app.get('port'));
