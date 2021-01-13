@@ -2,11 +2,20 @@
 
 Este es un proyecto en el que podras tener un banco virtual para simular acciones reales.
 
-### Pre-requisitos 📋
+## Tabla de contenidos:
+---
+
+- [Pre requisitos](#pre-requisitos)
+- [Instalación](#instalación)
+- [Ejecutando el programa](#ejecutando-el-programa)
+- [Cómo contribuir](#cómo-contribuir)
+- [Licencia](#licencia)
+
+### Pre-requisitos
 
 Necessitas Nodejs para poder utilizar el programa y mysql como gestor de bases de datos.
 
-### Instalación 🔧
+### Instalación
 
 Cuando tengas el repositorio clonado simplemente abres la carpeta de este en una terminal y ejecutas los siguientes comandos.
 
@@ -76,7 +85,7 @@ Para terminar tendras que abri el archivo **keys.js** en la carpeta **src** y mo
 
 Y con esto ya tendras el programa listo para funcionar.
 
-## Ejecutando el programa ⚙️
+## Ejecutando el programa
 
 Para poder ejecutarlo tienes que ir a la carpeta raiz del proyecto y ejecutar el siguiente comando:
 
@@ -97,3 +106,10 @@ Y ya estaras utilizando el programa, ojo esto sirve si lo ejecutas en tu ordenad
 ```
 (ip del ordenador servidor):(numero del puerto que te ha salido)
 ```
+## Cómo contribuir
+---
+Aun no decidido, estara pronto
+
+## Licencia 
+---
+[LICENCIA](https://github.com/EstiknoD/bankAccount/blob/master/LICENSE.md)
