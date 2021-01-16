@@ -12,6 +12,17 @@ router.get('/add', (req, res) => {
 
 router.post('/add', (req, res) => {
     console.log(req.body);
+    if(req.body.checkfrom == null){
+        const {targetnumber, targetpin, targetcantitate} = req.body;
+    }
+    else{
+        const {checkfrom, checkcode, checkpin} = req.body;
+        const newcheck = {
+            from_person: checkfrom,
+            code: checkcode,
+            pin: checkpin 
+        };
+    }
     res.send('recibido');
 });
 

@@ -7,9 +7,7 @@ CREATE TABLE users(
     id INT(11) NOT NULL,
     username VARCHAR(16) NOT NULL,
     password VARCHAR(60) NOT NULL,
-    fullname VARCHAR(100) NOT NULL,
-    target_num TEXT,
-    target_pin INT(4)
+    fullname VARCHAR(100) NOT NULL
 );
 
 ALTER TABLE users
@@ -19,6 +17,21 @@ ALTER TABLE users
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
 DESCRIBE users;
+
+CREATE TABLE targets(
+    id INT(11) NOT NULL,
+    user_id INT(11),
+    target_num TEXT,
+    target_pin INT(4)
+);
+
+ALTER TABLE targets
+    ADD PRIMARY KEY (id);
+
+ALTER TABLE targets
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+
+DESCRIBE targets;
 
 --Accounts tables
 
