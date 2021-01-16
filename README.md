@@ -8,7 +8,6 @@ Este es un proyecto en el que podras tener un banco virtual para simular accione
 - [Pre requisitos](#pre-requisitos)
 - [Instalación](#instalación)
 - [Ejecutando el programa](#ejecutando-el-programa)
-- [Cómo contribuir](#cómo-contribuir)
 - [Licencia](#licencia)
 
 ### Pre-requisitos
@@ -156,9 +155,6 @@ Y ya estaras utilizando el programa, ojo esto sirve si lo ejecutas en tu ordenad
 ```
 (ip del ordenador servidor):(numero del puerto que te ha salido)
 ```
-## Cómo contribuir
----
-Aun no decidido, estara pronto
 
 ## Licencia 
 ---
