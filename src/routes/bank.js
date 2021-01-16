@@ -6,8 +6,13 @@ router.get('/', (req, res) => {
     res.render('bank/account');
 });
 
-router.get('/main', (req, res) => {
-    res.render('bank/mainaccount');
+router.get('/add', (req, res) => {
+    res.render('bank/add');
+});
+
+router.post('/add', (req, res) => {
+    console.log(req.body);
+    res.send('recibido');
 });
 
 router.get('/save', (req, res) => {
