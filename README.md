@@ -47,6 +47,21 @@ ALTER TABLE users
 
 DESCRIBE users;
 
+CREATE TABLE targets(
+    id INT(11) NOT NULL,
+    user_id INT(11),
+    target_num TEXT,
+    target_pin INT(4)
+);
+
+ALTER TABLE targets
+    ADD PRIMARY KEY (id);
+
+ALTER TABLE targets
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+
+DESCRIBE targets;
+
 --Accounts tables
 
 CREATE TABLE mainAccount(
