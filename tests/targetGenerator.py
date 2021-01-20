@@ -21,9 +21,6 @@ if(len(results) > 0):
 
 ## Insertar los datos de la nueva targeta ###
 
-print(pin)
-print(id)
-
 if(id == 0):
     cursor.execute(f'INSERT INTO targets(user_id, target_num, target_pin) VALUES (NULL, {str(num)}, {str(pin)})')
 else:
@@ -34,5 +31,8 @@ miConexion.commit()
 ### Cerrar la conexion con la base de datos ###
 
 print('Se creo la targeta exitosamente')
+
+print('El numero de la targeta es: ' + num)
+print('El pin es: ' + pin)
 
 miConexion.close()
